@@ -1,0 +1,22 @@
+name: Work Machine Mission Tests
+on:
+  push:
+    paths:
+      - "plugins/work_machine/**"
+      - "tests/work_machine/**"
+      - ".github/workflows/work-machine.yml"
+  pull_request:
+    paths:
+      - "plugins/work_machine/**"
+      - "tests/work_machine/**"
+      - ".github/workflows/work-machine.yml"
+jobs:
+  mission-unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.14"
+      - name: Run mission tests (stdlib-only)
+        run: python -m unittest discover -s tests/work_machine -p 'test_*.py' -v

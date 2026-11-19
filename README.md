@@ -1,3 +1,23 @@
+# Work Machine ⚙️
+
+**Work Machine** is an independent, public fork of [Nous Research's Hermes Agent](https://github.com/NousResearch/hermes-agent), with a new **Mission Control** layer for long-running, auditable agent work.
+
+**What this fork adds (initial release):**
+- Durable SQLite mission plans and step checkpoints across process restarts.
+- Bounded attempts to prevent unending retry loops.
+- Explicit acceptance criteria and recorded evidence for each completed step.
+- Safe pause-on-failure states, resumable in-progress steps, and an event audit trail.
+- A native Hermes tool named **work_machine_goal** (opt-in plugin, no API keys or extra dependencies).
+- Focused regression tests and a separate CI workflow.
+
+Read the [Work Machine guide](WORK_MACHINE.md) for setup, limitations, usage, and the roadmap.
+
+**Attribution:** Based on Hermes Agent © Nous Research and contributors, licensed under MIT. The original MIT LICENSE and Git history are retained. Work Machine is an independent community fork and is not endorsed by Nous Research.
+
+---
+
+## Upstream Hermes Agent README (retained for compatibility)
+
 <p align="center">
   <img src="assets/banner.png" alt="Hermes Agent" width="100%">
 </p>

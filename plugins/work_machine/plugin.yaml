@@ -1,0 +1,9 @@
+name: work-machine
+version: 0.1.0
+manifest_version: 2
+description: "Durable, bounded, auditable goal execution checkpoints for Work Machine"
+author: "Work Machine contributors"
+license: MIT
+homepage: https://github.com/carlos210609/work-machine
+provides_tools:
+  - work_machine_goal
